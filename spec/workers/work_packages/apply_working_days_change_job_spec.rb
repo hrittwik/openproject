@@ -160,7 +160,7 @@ RSpec.describe WorkPackages::ApplyWorkingDaysChangeJob do
     end
   end
 
-  xcontext 'when a follower has a predecessor with a non-working day between them that is now a working day' do
+  context 'when a follower has a predecessor with a non-working day between them that is now a working day' do
     let!(:week) { create(:week, working_days: ['monday', 'tuesday', 'thursday', 'friday']) }
 
     let_schedule(<<~CHART)
@@ -244,7 +244,7 @@ RSpec.describe WorkPackages::ApplyWorkingDaysChangeJob do
     end
   end
 
-  xcontext 'when having multiple work packages following each other, and having days becoming working days' do
+  context 'when having multiple work packages following each other, and having days becoming working days' do
     let!(:week) { create(:week, working_days: ['monday', 'thursday']) }
 
     let_schedule(<<~CHART)
