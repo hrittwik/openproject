@@ -17,6 +17,10 @@ export class ActivateFacetButtonComponent {
       unread: this.I18n.t('js.notifications.facets.unread'),
       all: this.I18n.t('js.notifications.facets.all'),
     },
+    facet_titles: {
+      unread: this.I18n.t('js.notifications.facets.unread'),
+      all: this.I18n.t('js.timelines.outlines.all'),
+    },
   };
 
   availableFacets = Object.keys(IAN_FACET_FILTERS);
